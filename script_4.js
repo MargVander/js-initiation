@@ -26,9 +26,21 @@ let ownUppercase = journalistsArray.filter(function(element) {
 });
 console.log("Il y a " + ownUppercase.length + " handle de journalistes qui contiennent une capitale");
 
-let numberOfUnderscore = journalistsArray.filter(journalist => journalist.includes("_"));
-console.log("Il y a " + numberOfUnderscore.length + " handles de journalistes qui contiennent un underscore.");
 
+let numberOfUnderscore = journalistsArray.join(" ")
+function charCount(str, letter)
+{
+var letterCount = 0;
+for (var position = 0; position < str.length; position++)
+{
+ if (str.charAt(position) == letter)
+   {
+   letterCount += 1;
+   }
+}
+return letterCount;
+}
+console.log(charCount(numberOfUnderscore, "_"));
 
 alphabitize = secondarray.sort();
 console.log(alphabitize);
